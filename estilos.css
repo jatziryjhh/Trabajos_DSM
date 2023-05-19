@@ -1,0 +1,29 @@
+html{
+    background-color:#FBD1FE;
+}
+body{
+    background-color:#F08080;
+    color:#000000;
+    margin:auto;
+    
+}
+.nombre{
+    margin:auto;
+    
+}
+.info{
+    margin:auto;
+}
+.banda{
+    margin:auto;
+}
+.imagenes{
+    margin:auto;
+}
+.integrantes{
+    margin:auto;
+}
+header{
+    float:center;
+    background-color:#FFA07A;
+}

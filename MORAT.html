@@ -1,39 +1,19 @@
 <html>
     <head>
         <head>
-            <meta charset="utf-8"/>
-            <title>MORAT</title>
+            <head>
+                <link rel="stylesheet" type="text/css" href="../examenU1_HerreraHernandez_JovannaJatziry/estilos.css">
+                <meta charset="UTF-8">
+                <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+                <meta name="description" content="Morat">
+                <meta name="keywords" content="HTML, CSS, JavaScript">
+                <meta name="author" content="Jatziry Herrera">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>MORAT</title>
+                </head>
         </head>
         <style>
-            html{
-                background-color:#FBD1FE;
-            }
-            body{
-                background-color:#F08080;
-                color:#000000;
-                margin:auto;
-                
-            }
-            #nombre{
-                margin:auto;
-                
-            }
-            #info{
-                margin:auto;
-            }
-            #banda{
-                margin:auto;
-            }
-            #imagenes{
-                margin:auto;
-            }
-            #integrantes{
-                margin:auto;
-            }
-            header{
-                float:center;
-                background-color:#FFA07A;
-            }
+           
         
         </style>
         <body>
@@ -101,14 +81,32 @@
                             <h1 align="center"><b>&#128150 &#127801 INTEGRANTES &#127801 &#128150</b></h1>
 
                             <p align="center">
+                                    <center><img id="foto" src="imagenes/descarga.png" alt="logo Morat"</center>
+                                    <br>
+                                    <br>
+                                    <left><button  id="cambiar">CAMBIO DE FOTO</button></left>
+                                    <rigth><button id="regreso">REGRESAR A LA DE FOTO</button></rigth>
+                                    <br>
+                                    <br>
+                            </p>
+                            <p>
                                     <h3 align="center"><b>Juan Pablo Isaza Piñeros</b></h3>
                                     <center><img src="imagenes/isaza.jpg" align="center"></center>
-                                       <h3 align="center" ><b>Juan Pablo Villamil Cortés</b></h3>
-                                       <center><img src="imagenes/villa.jpg" align="center"></center>
-                                       <h3 align ="center"><b>Simón Vargas Morales  </b></h3>
-                                       <center><img src="imagenes/simon.jpg" align="center"></center>
-                                       <h3 align ="center"><b>Martín Vargas Morales </b></h3>
-                                       <center><img src="imagenes/martin.jpg" align="center"></center>
+                                    <br>
+                                    <br>
+                        </p>
+                                    <h3 align="center" ><b>Juan Pablo Villamil Cortés</b></h3>
+                                    <center><img src="imagenes/villa.jpg" align="center"></center>
+                                    <br>
+                                    <br>
+                                    <h3 align ="center"><b>Simón Vargas Morales  </b></h3>
+                                    <center><img src="imagenes/simon.jpg" align="center"></center>
+                                    <br>
+                                    <br>
+                                    <h3 align ="center"><b>Martín Vargas Morales </b></h3>
+                                    <center><img src="imagenes/martin.jpg" align="center"></center>
+                                    <br>
+                                    <br>
                             </p>
                         </p>
                 </header>
@@ -134,6 +132,31 @@
             </div>
                 </header>
             </div>
+            <script>
+               var imagenes = ["imagenes/descarga.png","imagenes/logo2.jpg","imagenes/isaza.jpg" ,"imagenes/villa.jpg","imagenes/simon.jpg" ,"imagenes/martin.jpg" ];
+                var i = 0;
+                var foto = document.getElementById("foto");
+                var btnAnterior = document.getElementById("cambiar");
+                var btnSiguiente = document.getElementById("regreso");
+                
+                function cambiarImagen() {
+                  foto.src = imagenes[i];
+                }
+                function Siguiente() {
+                i = (i + 1) % imagenes.length;
+                cambiarImagen();
+                }
+                
+                function Anterior() {
+                i = (i - 1 + imagenes.length) % imagenes.length;
+                cambiarImagen();
+                }
+                
+                btnAnterior.addEventListener("click",Anterior);
+                btnSiguiente.addEventListener("click",Siguiente);
+                
+                cambiarImagen(); 
+                </script>
         </body>
     </head>
 </html>
