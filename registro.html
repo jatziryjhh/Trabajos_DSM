@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <head>
+            <head>
+                <link rel="stylesheet" type="text/css" href="../examenU1_HerreraHernandez_JovannaJatziry/estilos.css">
+                <meta charset="UTF-8">
+                <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+                <meta name="description" content="Formulario">
+                <meta name="keywords" content="HTML, CSS, JavaScript">
+                <meta name="author" content="Jatziry Herrera">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>TRABAJO 7</title>
+            </head>
+
+        </head>
+        <style>
+        </style>
+        <body>
+            <center>
+                <h1><strong>TUS RESPUESTAS AL FORMULARIO FUERON</strong> </h1>
+                <H1>TU NOMBRE ES : <a id="h1"></a></H1>
+                <h2>TUS APELLIDOS SON : <a id="h2"></a></h2> 
+                <a id="email" href = "mailto: correo"><h2 id="correo">ENVIAR CORREO</h2></a>
+                <a id="telefono" href="tel:telefono"><h2 id="telefono">TELEFONO</h2></a>
+                <h2>TU EDAD ES:<a id="edad"></a> </h2>
+                <h2 >TU USUARIO ES : <a id="usuario"></a></h2>
+                <h2 id="password"></h2>
+                <center><img src="../examenU1_HerreraHernandez_JovannaJatziry/imagenes/pooh_baila.gif" align="center"></center><br>
+                <br><br>
+                
+               
+             </center>
+        </body>
+        <script>
+            getParameter = (key) => {
+            address = window.location.search; // url de la ventana actual
+            // Objeto de tipo URLSearchParams
+            parameterList = new URLSearchParams(address);
+            // Regresa el valor del parámetro “key”
+            return parameterList.get(key);
+            }
+            console.log(getParameter("nombre"));
+
+            var nombre=getParameter("nombre")
+            var apellido=getParameter("apellido")
+            var correo=getParameter("correo")
+            var Fecha=getParameter("Fecha")
+            var telefono=getParameter("telefono")
+            var usuario=getParameter("usuario")
+            var contra=getParameter("contra")
+            var repetir=getParameter("repetir")
+
+            document.getElementById("h1").innerHTML=nombre;
+            document.getElementById("h2").innerHTML=apellido;
+            document.getElementById("email").href="mailto:"+correo;
+            document.getElementById("edad").innerHTML=edad;
+            document.getElementById("telefono").href="tel:"+telefono;
+            document.getElementById("usuario").innerHTML=usuario;
+
+            console.log(getParameter("Fecha"));
+            var edad = 2023 - getParameter("Fecha").split("-")[0];
+            if (edad != null) {
+                document.getElementById("edad").innerHTML = edad;
+            }
+            
+            console.log(getParameter("contra"));
+            var contra = getParameter("contra");
+            console.log(getParameter("repetir"));
+            var repetir = getParameter("repetir");
+
+            if(contra.length && repetir.length < 5){
+                alert("TE VAN A HACKEAR MANO,TU CONTRASEÑA ES INSEGURA:3")
+            }
+
+</script>
+        </script>
+    </head>
+</html>
